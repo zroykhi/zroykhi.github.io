@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+  <url>
+    <loc>http://www.zhizhou.site/2018/05/18/MyPage/</loc>
+    <lastmod>2018-05-18T20:39:00.961Z</lastmod>
+    <data>
+        <display>
+        <title>MyPage</title>
+        <pubTime>2018-05-18T20:37:59.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.zhizhou.site/2018/05/18/hello-world/</loc>
+    <lastmod>2018-05-18T19:27:51.851Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2018-05-18T19:27:51.851Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
