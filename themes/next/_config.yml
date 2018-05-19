@@ -93,7 +93,7 @@ index_with_subtitle: false
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
   home: / || home
-  #about: /about/ || user
+  about: /about/ || user
   #tags: /tags/ || tags
   #categories: /categories/ || th
   archives: /archives/ || archive
@@ -111,9 +111,9 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
-#scheme: Pisces
+scheme: Pisces
 #scheme: Gemini
 
 
@@ -126,16 +126,17 @@ scheme: Muse
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
+social:
+  GitHub: https://github.com/zroykhi || github
+  E-Mail: mailto:zhizhou.sjtu@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
   #YouTube: https://youtube.com/yourname || youtube
-  #Instagram: https://instagram.com/yourname || instagram
+  Instagram: https://instagram.com/theoo1216 || instagram
+  知乎: https://www.zhihu.com/people/zhou-xiao-zhou-12-16/activities ||
   #Skype: skype:yourname?call|chat || skype
 
 social_icons:
@@ -155,6 +156,7 @@ links_layout: block
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
 #avatar: /images/avatar.gif
+avatar: /images/me.jpg
 
 # Table Of Contents in the Sidebar
 toc:
