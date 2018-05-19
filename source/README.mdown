@@ -1,1 +1,12 @@
 # Welcome to my personal page
+Site domain:
+  + http://www.zhizhou.site
+
+Also available with github link:
+  + https://github.com/zroykhi/zroykhi.github.io.git
+
+How to build this blog:
+  + http://wangwlj.com/2017/09/09/blog-opti/
+
+Hexo writing:
+  + https://hexo.io/zh-cn/docs/writing.html

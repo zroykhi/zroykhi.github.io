@@ -4,8 +4,8 @@
 
 # Site
 title: Zhi ZHOU's blog
-subtitle:
-description:
+subtitle: 一路上, 湛海蓝天
+description: 不忘初心
 keywords:
 author: Zhi ZHOU
 language:
@@ -13,7 +13,8 @@ timezone: Europe/Paris
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+#url: http://www.zhizhou.site
+url: http://zhizhou.site
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -43,7 +44,7 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -52,7 +53,7 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -69,7 +70,7 @@ time_format: HH:mm:ss
 search:
   path: search.xml
   field: post
-  #format: html
+  format: html
   limit: 10000
 
 # Pagination
@@ -88,3 +89,16 @@ deploy:
   type: git
   repo: git@github.com:zroykhi/zroykhi.github.io.git
   branch: master
+
+# 自动生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
+feed:
+  type: rss2
+  path: rss2.xml
+  limit: 10
+  hub:
+  content: 'true'
