@@ -2,21 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.zhizhou.site/categories/index.html</loc>
+    <loc>http://zhizhou.site/tags/index.html</loc>
+    
+    <lastmod>2018-05-19T21:09:01.152Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhizhou.site/about/index.html</loc>
+    
+    <lastmod>2018-05-19T21:00:34.298Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhizhou.site/categories/index.html</loc>
     
     <lastmod>2018-05-19T09:39:41.628Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.zhizhou.site/2018/05/18/MyPage/</loc>
+    <loc>http://zhizhou.site/2018/05/18/MyPage/</loc>
     
     <lastmod>2018-05-18T20:39:00.961Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.zhizhou.site/2018/05/18/hello-world/</loc>
+    <loc>http://zhizhou.site/2018/05/18/hello-world/</loc>
     
     <lastmod>2018-05-18T19:27:51.851Z</lastmod>
     
