@@ -27,9 +27,9 @@ override: false
 # For example, you put your favicons into `hexo-site/source/images` directory.
 # Then need to rename & redefine they on any other names, otherwise icons from Next will rewrite your custom icons in Hexo.
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/apple-touch-icon-next.png
+  small: /images/web_icon.jpg # favicon-16x16-next.png
+  medium: /images/web_icon.jpg # favicon-32x32-next.png
+  apple_touch_icon: /images/web_icon.jpg # apple-touch-icon-next.png
   safari_pinned_tab: /images/logo.svg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
@@ -54,16 +54,16 @@ footer:
   copyright:
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
-  powered: true
+  powered: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    enable: false
     # Version info of NexT after scheme info (vX.X.X).
     version: true
   # -------------------------------------------------------------
   # Any custom text can be defined here.
-  #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
+  custom_text: Je pense, donc j'existe <a target="_blank" href="https://pages.github.com"></a>
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -95,7 +95,7 @@ menu:
   home: / || home
   about: /about/ || user
   #tags: /tags/ || tags
-  #categories: /categories/ || th
+  categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
@@ -166,7 +166,8 @@ toc:
   number: true
 
   # If true, all words will placed on next lines if header width longer then sidebar width.
-  wrap: false
+  #wrap: false
+  wrap: true
 
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
@@ -184,22 +185,24 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
+  #display: post
   #display: always
-  #display: hide
+  display: hide
   #display: remove
 
   # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
   offset: 12
 
   # Back to top in sidebar (only for Pisces | Gemini).
-  b2t: false
+  #b2t: false
+  b2t: true
 
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  #scrollpercent: false
+  scrollpercent: true
 
   # Enable sidebar on narrow view (only for Muse | Mist).
-  onmobile: false
+  onmobile: true
 
 
 # ---------------------------------------------------------------
@@ -210,7 +213,7 @@ sidebar:
 scroll_to_more: true
 
 # Automatically saving scroll position on each post/page in cookies.
-save_scroll: false
+save_scroll: true
 
 # Automatically excerpt description in homepage as preamble text.
 excerpt_description: true
@@ -218,8 +221,8 @@ excerpt_description: true
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
-  length: 150
+  enable: true
+  length: 300
 
 # Post meta display settings
 post_meta:
@@ -233,8 +236,8 @@ post_meta:
 post_wordcount:
   item_text: true
   wordcount: false
-  min2read: false
-  totalcount: false
+  min2read: true
+  totalcount: true
   separated_meta: true
 
 # Wechat Subscriber
@@ -349,7 +352,7 @@ mathjax:
   cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
 # Han Support docs: https://hanzi.pro/
-han: false
+han: true
 
 # Swiftype Search API Key
 #swiftype_key:
@@ -363,6 +366,7 @@ han: false
 # Disqus
 disqus:
   enable: false
+  #enable: true
   shortname:
   count: true
 
@@ -381,8 +385,8 @@ changyan:
 # more info please open https://valine.js.org
 valine:
   enable: false
-  appid:  # your leancloud application appid
-  appkey:  # your leancloud application appkey
+  appid:  #gvzG0bH3UNclSm9K0DQIGhiJ-gzGzoHsz
+  appkey:  #mHS38xMkeGcLyFsK98jwenjn
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # comment box placeholder
@@ -397,7 +401,7 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+livere_uid: MTAyMC8zNjYxNC8xMzE0OQ==
 
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
@@ -427,7 +431,7 @@ gitment:
 # This plugin is more useful in China, make sure you known how to use it.
 # And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
-#jiathis:
+jiathis: false
   ##uid: Get this uid from http://www.jiathis.com/
 #add_this_id:
 
@@ -446,7 +450,7 @@ gitment:
 #           Technorati,Posterous,Tumblr,GoogleBookmarks,Newsvine,
 #           Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru
 needmoreshare2:
-  enable: false
+  enable: true
   postbottom:
     enable: false
     options:
@@ -455,7 +459,7 @@ needmoreshare2:
       position: bottomCenter
       networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
   float:
-    enable: false
+    enable: true
     options:
       iconStyle: box
       boxForm: horizontal
@@ -488,10 +492,10 @@ needmoreshare2:
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
-  ua_enable: true
+  ua_enable: false
   admin_enable: false
   user_id: 0
-  #admin_nickname: Author
+  admin_nickname: Author
 
 # Post widgets & FB/VK comments settings.
 # ---------------------------------------------------------------
@@ -533,17 +537,17 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: gvzG0bH3UNclSm9K0DQIGhiJ-gzGzoHsz
+  app_key: mHS38xMkeGcLyFsK98jwenjn
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId
 # visit https://firebase.google.com/docs/firestore/ to get more information about firestore
 firestore:
-  enable: false
+  enable: false # true
   collection: articles #required, a string collection name to access firestore database
-  apiKey: #required
+  apiKey: #AIzaSyB41r1gp-s0Sd6Fq1T14x6L2uDxV06ZJUc
   projectId: #required
   bluebird: false #enable this if you want to include bluebird 3.5.1(core version) Promise polyfill
 
@@ -595,7 +599,8 @@ calendar:
 
 # Algolia Search
 algolia_search:
-  enable: false
+  #enable: false
+  enable: true
   hits:
     per_page: 10
   labels:
@@ -606,7 +611,7 @@ algolia_search:
 # Local search
 # Dependencies: https://github.com/flashlab/hexo-generator-search
 local_search:
-  enable: false
+  enable: true
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
@@ -697,7 +702,7 @@ pace: false
 pace_theme: pace-theme-minimal
 
 # Canvas-nest
-canvas_nest: false
+canvas_nest: true
 
 # three_waves
 three_waves: false
@@ -805,6 +810,8 @@ vendors:
   # https://github.com/revir/need-more-share2
   needMoreShare2:
 
+passage_end_tag:
+  enabled: true
 
 # Assets
 css: css

@@ -1,3 +1,4 @@
+
 <div class="popup search-popup local-search-popup">
   <div class="local-search-header clearfix">
     <span class="search-icon">
@@ -14,3 +15,5 @@
   </div>
   <div id="local-search-result"></div>
 </div>
+
+

@@ -44,6 +44,15 @@
   if hexo-config('motion.transition.coll_header') { .collection-title { opacity: 0; } }
 }
 
+.post-body p a{
+  color: #0593d3;
+  border-bottom: none;
+  &:hover {
+    color: #0477ab;
+    text-decoration: underline;
+  }
+}
+
 @import "post-expand";
 @import "post-collapse";
 @import "post-type";
