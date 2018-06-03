@@ -8,8 +8,30 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一路上, 湛海蓝天</description>
-    <pubDate>Fri, 18 May 2018 20:39:00 GMT</pubDate>
+    <pubDate>Sun, 03 Jun 2018 22:54:53 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>编程笔记</title>
+      <link>http://zhizhou.site/2018/06/04/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/</link>
+      <guid>http://zhizhou.site/2018/06/04/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/</guid>
+      <pubDate>Sun, 03 Jun 2018 22:37:42 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;前言：该文章用于记录个人平时的阅读笔记或者编程随想。内容比较片段化，有些地方略过，不会解释太清楚，目的只是一个reminder。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;C-智能指针&quot;&gt;&lt;a href=&quot;#C-智能指针&quot; class=&quot;
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<blockquote><p>前言：该文章用于记录个人平时的阅读笔记或者编程随想。内容比较片段化，有些地方略过，不会解释太清楚，目的只是一个reminder。</p></blockquote><h3 id="C-智能指针"><a href="#C-智能指针" class="headerlink" title="C++ 智能指针"></a>C++ 智能指针</h3><p>C++ 智能指针能够自动释放指针指向的内存，避免内存泄露的危险。常用的C++智能指针有shared_ptr，auto_ptr，unique_ptr和weak_ptr。<br>相关阅读：</p><ul><li><a href="https://www.cnblogs.com/lanxuezaipiao/p/4132096.html" target="_blank" rel="noopener">C++智能指针简单剖析</a></li></ul>]]></content:encoded>
+      
+      <comments>http://zhizhou.site/2018/06/04/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>MyPage</title>

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[编程笔记]]></title>
+    <url>%2F2018%2F06%2F04%2F%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[前言：该文章用于记录个人平时的阅读笔记或者编程随想。内容比较片段化，有些地方略过，不会解释太清楚，目的只是一个reminder。 C++ 智能指针C++ 智能指针能够自动释放指针指向的内存，避免内存泄露的危险。常用的C++智能指针有shared_ptr，auto_ptr，unique_ptr和weak_ptr。相关阅读： C++智能指针简单剖析]]></content>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MyPage]]></title>
     <url>%2F2018%2F05%2F18%2FMyPage%2F</url>
     <content type="text"></content>
