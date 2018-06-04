@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="前言：该文章用于记录个人平时的阅读笔记或者编程随想。内容比较片段化，有些地方略过，不会解释太清楚，目的只是一个reminder。  C++ 智能指针C++ 智能指针能够自动释放指针指向的内存，避免内存泄露的危险。常用的C++智能指针有shared_ptr，auto_ptr，unique_ptr和weak_ptr。 相关阅读 C++智能指针简单剖析">
+<meta name="description" content="前言：该文章用于记录个人平时的阅读笔记或者编程随想。内容比较片段化，有些地方略过，有些地方会直接引用，不会细讲，目的只是一个reminder。  C++ 智能指针C++ 智能指针能够自动释放指针指向的内存，避免内存泄露的危险。常用的C++智能指针有shared_ptr，auto_ptr，unique_ptr和weak_ptr。 常见的内存错误１．内存分配不成功却使用了它。并不是所有内存分配都会成">
 <meta name="keywords" content="C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="编程笔记">
 <meta property="og:url" content="http://zhizhou.site/2018/06/04/编程笔记/index.html">
 <meta property="og:site_name" content="Zhi ZHOU&#39;s blog">
-<meta property="og:description" content="前言：该文章用于记录个人平时的阅读笔记或者编程随想。内容比较片段化，有些地方略过，不会解释太清楚，目的只是一个reminder。  C++ 智能指针C++ 智能指针能够自动释放指针指向的内存，避免内存泄露的危险。常用的C++智能指针有shared_ptr，auto_ptr，unique_ptr和weak_ptr。 相关阅读 C++智能指针简单剖析">
+<meta property="og:description" content="前言：该文章用于记录个人平时的阅读笔记或者编程随想。内容比较片段化，有些地方略过，有些地方会直接引用，不会细讲，目的只是一个reminder。  C++ 智能指针C++ 智能指针能够自动释放指针指向的内存，避免内存泄露的危险。常用的C++智能指针有shared_ptr，auto_ptr，unique_ptr和weak_ptr。 常见的内存错误１．内存分配不成功却使用了它。并不是所有内存分配都会成">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-03T23:17:16.090Z">
+<meta property="og:updated_time" content="2018-06-04T09:18:58.057Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编程笔记">
-<meta name="twitter:description" content="前言：该文章用于记录个人平时的阅读笔记或者编程随想。内容比较片段化，有些地方略过，不会解释太清楚，目的只是一个reminder。  C++ 智能指针C++ 智能指针能够自动释放指针指向的内存，避免内存泄露的危险。常用的C++智能指针有shared_ptr，auto_ptr，unique_ptr和weak_ptr。 相关阅读 C++智能指针简单剖析">
+<meta name="twitter:description" content="前言：该文章用于记录个人平时的阅读笔记或者编程随想。内容比较片段化，有些地方略过，有些地方会直接引用，不会细讲，目的只是一个reminder。  C++ 智能指针C++ 智能指针能够自动释放指针指向的内存，避免内存泄露的危险。常用的C++智能指针有shared_ptr，auto_ptr，unique_ptr和weak_ptr。 常见的内存错误１．内存分配不成功却使用了它。并不是所有内存分配都会成">
 
 
 
@@ -377,17 +377,6 @@
 
           
           
-             <span id="/2018/06/04/编程笔记/" class="leancloud_visitors" data-flag-title="编程笔记">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
           
 
@@ -405,7 +394,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  6
                 </span>
               
             </div>
@@ -427,11 +416,25 @@
 
       
         <blockquote>
-<p>前言：该文章用于记录个人平时的阅读笔记或者编程随想。内容比较片段化，有些地方略过，不会解释太清楚，目的只是一个reminder。</p>
+<p>前言：该文章用于记录个人平时的阅读笔记或者编程随想。内容比较片段化，有些地方略过，有些地方会直接引用，不会细讲，目的只是一个reminder。</p>
 </blockquote>
 <h3 id="C-智能指针"><a href="#C-智能指针" class="headerlink" title="C++ 智能指针"></a>C++ 智能指针</h3><p>C++ 智能指针能够自动释放指针指向的内存，避免内存泄露的危险。常用的C++智能指针有shared_ptr，auto_ptr，unique_ptr和weak_ptr。</p>
+<h4 id="常见的内存错误"><a href="#常见的内存错误" class="headerlink" title="常见的内存错误"></a>常见的内存错误</h4><p>１．内存分配不成功却使用了它。并不是所有内存分配都会成功，在使用之前使用assert(p!=NULL)来检查指针是否为NULL。如果是用malloc或new来申请内存，应该用if(p==NULL) 或if(p!=NULL)进行防错处理。<br>２．内存分配成功却忘记初始化而直接使用。由于没有初始化指针会乱指导致产生野指针。在变量声明时就可以直接初始化或者指向NULL。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char *p = NULL;</span><br><span class="line">char *str = (char *) malloc(100);</span><br></pre></td></tr></table></figure></p>
+<p>３．内存分配和初始化成功，但操作内存越界、尤其是在使用for循环时，容易混淆下标的范围。<br>４．忘记释放内存，造成内存泄露。如果不是使用智能指针，一个new对应一个delete（malloc与free相同），切记切记！<br>５．多次释放同一个内存。<br>６．使用free或delete释放了内存后，没有将指针指向NULL。导致产生“野指针”。<br>７．已经释放内存了却还使用它。</p>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><h5 id="１，内容修改和比较"><a href="#１，内容修改和比较" class="headerlink" title="１，内容修改和比较"></a>１，内容修改和比较</h5><p>常量字符串不能修改。虽然从语法上看没有错误，编译器不能发现错误，但是在运行时会出错。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">char a[] = “hello”;</span><br><span class="line">a[0] = ‘X’;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">char *p = “world”; // 注意p指向常量字符串</span><br><span class="line">p[0] = ‘X’; // 编译器不能发现该错误</span><br><span class="line">cout &lt;&lt; p &lt;&lt; endl;</span><br></pre></td></tr></table></figure></p>
+<p>数组不能直接进行复制和比较。将数组a内容复制给b不能简单使用b = a，否则产生编译错误，应该使用strcpy。同理使用strcmp比较两个数组。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 数组…</span><br><span class="line">char a[] = &quot;hello&quot;;</span><br><span class="line">char b[10];</span><br><span class="line">strcpy(b, a); // 不能用 b = a;</span><br><span class="line">if(strcmp(b, a) == 0) // 不能用 if (b == a)</span><br><span class="line">…</span><br><span class="line">// 指针…</span><br><span class="line">int len = strlen(a);</span><br><span class="line">char *p = (char *)malloc(sizeof(char)*(len+1));</span><br><span class="line">strcpy(p,a); // 不要用 p = a;</span><br><span class="line">if(strcmp(p, a) == 0) // 不要用 if (p == a)</span><br></pre></td></tr></table></figure></p>
+<p>注意当数组作为函数的参数进行传递时，该数组自动退化为同类型的指针。如下示例中，不论数组a的容量是多少，sizeof(a)始终等于sizeof(char *)。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void Func(char a[100])</span><br><span class="line">&#123;</span><br><span class="line">　cout&lt;&lt; sizeof(a) &lt;&lt; endl; // 4字节而不是100字节</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="指针参数的传递"><a href="#指针参数的传递" class="headerlink" title="指针参数的传递"></a>指针参数的传递</h5><p>不要使用指针去申请动态内存。下例中str最后还是NULL。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">void GetMemory(char *p, int num)</span><br><span class="line">&#123;</span><br><span class="line">　p = (char *)malloc(sizeof(char) * num);</span><br><span class="line">&#125;</span><br><span class="line">void Test(void)</span><br><span class="line">&#123;</span><br><span class="line">　char *str = NULL;</span><br><span class="line">　GetMemory(str, 100); // str 仍然为 NULL</span><br><span class="line">　strcpy(str, &quot;hello&quot;); // 运行错误</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>毛病出在函数GetMemory中。编译器总是要为函数的每个参数制作临时副本，指针参数p的副本是 _p，编译器使 _p = p。如果函数体内的程序修改了_p的内容，就导致参数p的内容作相应的修改。这就是指针可以用作输出参数的原因。在本例中，_p申请了新的内存，只是把_p所指的内存地址改变了，但是p丝毫未变。所以函数GetMemory并不能输出任何东西。事实上，每执行一次GetMemory就会泄露一块内存，因为没有用free释放内存。</p>
+<p>如果非得要用指针参数去申请内存，那么应该改用“指向指针的指针”，见示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">void GetMemory2(char \**p, int num)</span><br><span class="line">&#123;</span><br><span class="line">　\*p = (char \*)malloc(sizeof(char) * num);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void Test2(void)</span><br><span class="line">&#123;</span><br><span class="line">　char \*str = NULL;</span><br><span class="line">　GetMemory2(&amp;str, 100); // 注意参数是 &amp;str，而不是str</span><br><span class="line">　strcpy(str, &quot;hello&quot;);</span><br><span class="line">　cout&lt;&lt; str &lt;&lt; endl;</span><br><span class="line">　free(str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>由于“指向指针的指针”这个概念不容易理解，我们可以用函数返回值来传递动态内存。这种方法更加简单，见示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">char \*GetMemory3(int num)</span><br><span class="line">&#123;</span><br><span class="line">　char \*p = (char \*)malloc(sizeof(char) * num);</span><br><span class="line">　return p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void Test3(void)</span><br><span class="line">&#123;</span><br><span class="line">　char \*str = NULL;</span><br><span class="line">　str = GetMemory3(100);</span><br><span class="line">　strcpy(str, &quot;hello&quot;);</span><br><span class="line">　cout&lt;&lt; str &lt;&lt; endl;</span><br><span class="line">　free(str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>用函数返回值来传递动态内存这种方法虽然好用，但是常常有人把return语句用错了。这里强调不要用return语句返回指向“栈内存”的指针，因为该内存在函数结束时自动消亡，见示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">char \*GetString(void)</span><br><span class="line">&#123;</span><br><span class="line">　char p[] = &quot;hello world&quot;;</span><br><span class="line">　return p; // 编译器将提出警告</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void Test4(void)</span><br><span class="line">&#123;</span><br><span class="line">　char \*str = NULL;</span><br><span class="line">　str = GetString(); // str 的内容是垃圾</span><br><span class="line">　cout&lt;&lt; str &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>用调试器逐步跟踪Test4，发现执行str = GetString语句后str不再是NULL指针，但是str的内容不是“hello world”而是垃圾。</p>
+<p>如果把上述示例改写成如下示例，会怎么样？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">char *GetString2(void)</span><br><span class="line">&#123;</span><br><span class="line">　char *p = &quot;hello world&quot;;</span><br><span class="line">　return p;</span><br><span class="line">&#125;</span><br><span class="line">void Test5(void)</span><br><span class="line">&#123;</span><br><span class="line">　char *str = NULL;</span><br><span class="line">　str = GetString2();</span><br><span class="line">　cout&lt;&lt; str &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line">`</span><br></pre></td></tr></table></figure></p>
+<p>函数Test5运行虽然不会出错，但是函数GetString2的设计概念却是错误的。因为GetString2内的“hello world”是常量字符串，位于静态存储区，它在程序生命期内恒定不变。无论什么时候调用GetString2，它返回的始终是同一个“只读”的内存块。</p>
 <h4 id="相关阅读"><a href="#相关阅读" class="headerlink" title="相关阅读"></a>相关阅读</h4><ul>
 <li><a href="https://www.cnblogs.com/lanxuezaipiao/p/4132096.html" target="_blank" rel="noopener">C++智能指针简单剖析</a></li>
+<li><a href="https://www.cnblogs.com/dragon2012/p/3847966.html" target="_blank" rel="noopener">C++内存池</a></li>
 </ul>
 
       
@@ -673,7 +676,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#C-智能指针"><span class="nav-number">1.</span> <span class="nav-text">C++ 智能指针</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#相关阅读"><span class="nav-number">1.1.</span> <span class="nav-text">相关阅读</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#C-智能指针"><span class="nav-number">1.</span> <span class="nav-text">C++ 智能指针</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常见的内存错误"><span class="nav-number">1.1.</span> <span class="nav-text">常见的内存错误</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意事项"><span class="nav-number">1.2.</span> <span class="nav-text">注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#１，内容修改和比较"><span class="nav-number">1.2.1.</span> <span class="nav-text">１，内容修改和比较</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#指针参数的传递"><span class="nav-number">1.2.2.</span> <span class="nav-text">指针参数的传递</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关阅读"><span class="nav-number">1.3.</span> <span class="nav-text">相关阅读</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -714,7 +717,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">187</span>
+    <span title="Site words total count">1.5k</span>
   
 </div>
 
@@ -1231,113 +1234,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("gvzG0bH3UNclSm9K0DQIGhiJ-gzGzoHsz", "mHS38xMkeGcLyFsK98jwenjn");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 
