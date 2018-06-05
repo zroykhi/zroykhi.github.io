@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="Is it possible to specify different batch sizes for train and validation?for train data, there are reasons to keep batches relatively small (batch size can effect training results), however for the va">
+<meta name="description" content="Preface: Some note collections about machine learning  Is it possible to specify different batch sizes for train and validation?for train data, there are reasons to keep batches relatively small (bat">
 <meta name="keywords" content="machine learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Machine Learning Tricks">
+<meta property="og:title" content="Machine Learning Notes">
 <meta property="og:url" content="http://zhizhou.site/2018/06/05/Machine-Learning-Tricks/index.html">
 <meta property="og:site_name" content="Zhi ZHOU&#39;s blog">
-<meta property="og:description" content="Is it possible to specify different batch sizes for train and validation?for train data, there are reasons to keep batches relatively small (batch size can effect training results), however for the va">
+<meta property="og:description" content="Preface: Some note collections about machine learning  Is it possible to specify different batch sizes for train and validation?for train data, there are reasons to keep batches relatively small (bat">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-05T11:24:02.319Z">
+<meta property="og:updated_time" content="2018-06-05T16:04:34.037Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Machine Learning Tricks">
-<meta name="twitter:description" content="Is it possible to specify different batch sizes for train and validation?for train data, there are reasons to keep batches relatively small (batch size can effect training results), however for the va">
+<meta name="twitter:title" content="Machine Learning Notes">
+<meta name="twitter:description" content="Preface: Some note collections about machine learning  Is it possible to specify different batch sizes for train and validation?for train data, there are reasons to keep batches relatively small (bat">
 
 
 
@@ -134,7 +134,7 @@
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
 
-  <title>Machine Learning Tricks | Zhi ZHOU's blog</title>
+  <title>Machine Learning Notes | Zhi ZHOU's blog</title>
   
 
 
@@ -325,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Machine Learning Tricks</h1>
+          <h1 class="post-title" itemprop="name headline">Machine Learning Notes</h1>
         
 
         <div class="post-meta">
@@ -347,6 +347,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/阅读笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">阅读笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -393,7 +415,10 @@
       
 
       
-        <h3 id="Is-it-possible-to-specify-different-batch-sizes-for-train-and-validation"><a href="#Is-it-possible-to-specify-different-batch-sizes-for-train-and-validation" class="headerlink" title="Is it possible to specify different batch sizes for train and validation?"></a>Is it possible to specify different batch sizes for train and validation?</h3><p>for train data, there are reasons to keep batches relatively small (batch size can effect training results), however for the validation set, using a single reasonably big batch</p>
+        <blockquote>
+<p>Preface: Some note collections about machine learning</p>
+</blockquote>
+<h3 id="Is-it-possible-to-specify-different-batch-sizes-for-train-and-validation"><a href="#Is-it-possible-to-specify-different-batch-sizes-for-train-and-validation" class="headerlink" title="Is it possible to specify different batch sizes for train and validation?"></a>Is it possible to specify different batch sizes for train and validation?</h3><p>for train data, there are reasons to keep batches relatively small (batch size can effect training results), however for the validation set, using a single reasonably big batch</p>
 <h3 id="Why-mini-batch-size-is-better-than-one-single-“batch”-with-all-training-data"><a href="#Why-mini-batch-size-is-better-than-one-single-“batch”-with-all-training-data" class="headerlink" title="Why mini batch size is better than one single “batch” with all training data?"></a>Why mini batch size is better than one single “batch” with all training data?</h3><p><a href="http://hp.stuhome.net/index.php/2016/09/20/tensorflow_batch_minibatch/" target="_blank" rel="noopener">Answer1</a>:</p>
 <blockquote>
 <p>深度学习的优化算法，说白了就是梯度下降。每次的参数更新有两种方式。</p>
@@ -405,17 +430,11 @@
 <blockquote>
 <p>The key advantage of using minibatch as opposed to the full dataset goes back to the fundamental idea of stochastic gradient descent1.</p>
 <p>In batch gradient descent, you compute the gradient over the entire dataset, averaging over potentially a vast amount of information. It takes lots of memory to do that. But the real handicap is the batch gradient trajectory land you in a bad spot (saddle point).</p>
-</blockquote>
 <p>In pure SGD, on the other hand, you update your parameters by adding (minus sign) the gradient computed on a single instance of the dataset. Since it’s based on one random data point, it’s very noisy and may go off in a direction far from the batch gradient. However, the noisiness is exactly what you want in non-convex optimization, because it helps you escape from saddle points or local minima(Theorem 6 in [2]). The disadvantage is it’s terribly inefficient and you need to loop over the entire dataset many times to find a good solution.</p>
-<blockquote>
-</blockquote>
 <p>The minibatch methodology is a compromise that injects enough noise to each gradient update, while achieving a relative speedy convergence.</p>
-<blockquote>
-</blockquote>
 <p>1 Bottou, L. (2010). Large-scale machine learning with stochastic gradient descent. In Proceedings of COMPSTAT’2010 (pp. 177-186). Physica-Verlag HD.</p>
-<blockquote>
-</blockquote>
 <p>[2] Ge, R., Huang, F., Jin, C., &amp; Yuan, Y. (2015, June). Escaping From Saddle Points-Online Stochastic Gradient for Tensor Decomposition. In COLT (pp. 797-842).</p>
+</blockquote>
 
       
     </div>
@@ -542,7 +561,7 @@
                 alt="Zhi ZHOU" />
             
               <p class="site-author-name" itemprop="name">Zhi ZHOU</p>
-              <p class="site-description motion-element" itemprop="description">一路上, 湛海蓝天</p>
+              <p class="site-description motion-element" itemprop="description">Moi? Ça va</p>
           </div>
 
           <nav class="site-state motion-element">
