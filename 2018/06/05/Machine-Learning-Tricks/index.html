@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="machine learning," />
 
 
 
@@ -85,17 +85,18 @@
 
 
 
-<meta name="description" content="一路上, 湛海蓝天">
-<meta name="keywords" content="Tags, categories, posts">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zhi ZHOU&#39;s blog">
-<meta property="og:url" content="http://zhizhou.site/index.html">
+<meta name="description" content="Is it possible to specify different batch sizes for train and validation?for train data, there are reasons to keep batches relatively small (batch size can effect training results), however for the va">
+<meta name="keywords" content="machine learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Machine Learning Tricks">
+<meta property="og:url" content="http://zhizhou.site/2018/06/05/Machine-Learning-Tricks/index.html">
 <meta property="og:site_name" content="Zhi ZHOU&#39;s blog">
-<meta property="og:description" content="一路上, 湛海蓝天">
+<meta property="og:description" content="Is it possible to specify different batch sizes for train and validation?for train data, there are reasons to keep batches relatively small (batch size can effect training results), however for the va">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-06-05T11:24:02.319Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhi ZHOU&#39;s blog">
-<meta name="twitter:description" content="一路上, 湛海蓝天">
+<meta name="twitter:title" content="Machine Learning Tricks">
+<meta name="twitter:description" content="Is it possible to specify different batch sizes for train and validation?for train data, there are reasons to keep batches relatively small (batch size can effect training results), however for the va">
 
 
 
@@ -125,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="http://zhizhou.site/"/>
+  <link rel="canonical" href="http://zhizhou.site/2018/06/05/Machine-Learning-Tricks/"/>
 
 
 
@@ -133,7 +134,7 @@
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
 
-  <title>Zhi ZHOU's blog</title>
+  <title>Machine Learning Tricks | Zhi ZHOU's blog</title>
   
 
 
@@ -152,8 +153,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -293,9 +293,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -325,9 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/05/Machine-Learning-Tricks/" itemprop="url">Machine Learning Tricks</a></h1>
+          <h1 class="post-title" itemprop="name headline">Machine Learning Tricks</h1>
         
 
         <div class="post-meta">
@@ -395,19 +393,30 @@
       
 
       
-        
-          
-          Is it possible to specify different batch sizes for train and validation?for train data, there are reasons to keep batches relatively small (batch size can effect training results), however for the validation set, using a single reasonably big batch
-Why mini batch size is better than one single “bat
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/05/Machine-Learning-Tricks/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h3 id="Is-it-possible-to-specify-different-batch-sizes-for-train-and-validation"><a href="#Is-it-possible-to-specify-different-batch-sizes-for-train-and-validation" class="headerlink" title="Is it possible to specify different batch sizes for train and validation?"></a>Is it possible to specify different batch sizes for train and validation?</h3><p>for train data, there are reasons to keep batches relatively small (batch size can effect training results), however for the validation set, using a single reasonably big batch</p>
+<h3 id="Why-mini-batch-size-is-better-than-one-single-“batch”-with-all-training-data"><a href="#Why-mini-batch-size-is-better-than-one-single-“batch”-with-all-training-data" class="headerlink" title="Why mini batch size is better than one single “batch” with all training data?"></a>Why mini batch size is better than one single “batch” with all training data?</h3><p><a href="http://hp.stuhome.net/index.php/2016/09/20/tensorflow_batch_minibatch/" target="_blank" rel="noopener">Answer1</a>:</p>
+<blockquote>
+<p>深度学习的优化算法，说白了就是梯度下降。每次的参数更新有两种方式。</p>
+<p>第一种，遍历全部数据集算一次损失函数，然后算函数对各个参数的梯度，更新梯度。这种方法每更新一次参数都要把数据集里的所有样本都看一遍，计算量开销大，计算速度慢，不支持在线学习，这称为Batch gradient descent，批梯度下降。</p>
+<p>另一种，每看一个数据就算一下损失函数，然后求梯度更新参数，这个称为随机梯度下降，stochastic gradient descent。这个方法速度比较快，但是收敛性能不太好，可能在最优点附近晃来晃去，hit不到最优点。两次参数的更新也有可能互相抵消掉，造成目标函数震荡的比较剧烈。</p>
+<p>为了克服两种方法的缺点，现在一般采用的是一种折中手段，mini-batch gradient decent，小批的梯度下降，这种方法把数据分为若干个批，按批来更新参数，这样，一个批中的一组数据共同决定了本次梯度的方向，下降起来就不容易跑偏，减少了随机性。另一方面因为批的样本数与整个数据集相比小了很多，计算量也不是很大。</p>
+</blockquote>
+<p><a href="https://datascience.stackexchange.com/questions/16807/why-mini-batch-size-is-better-than-one-single-batch-with-all-training-data" target="_blank" rel="noopener">Answer2</a>:</p>
+<blockquote>
+<p>The key advantage of using minibatch as opposed to the full dataset goes back to the fundamental idea of stochastic gradient descent1.</p>
+<p>In batch gradient descent, you compute the gradient over the entire dataset, averaging over potentially a vast amount of information. It takes lots of memory to do that. But the real handicap is the batch gradient trajectory land you in a bad spot (saddle point).</p>
+</blockquote>
+<p>In pure SGD, on the other hand, you update your parameters by adding (minus sign) the gradient computed on a single instance of the dataset. Since it’s based on one random data point, it’s very noisy and may go off in a direction far from the batch gradient. However, the noisiness is exactly what you want in non-convex optimization, because it helps you escape from saddle points or local minima(Theorem 6 in [2]). The disadvantage is it’s terribly inefficient and you need to loop over the entire dataset many times to find a good solution.</p>
+<blockquote>
+</blockquote>
+<p>The minibatch methodology is a compromise that injects enough noise to each gradient update, while achieving a relative speedy convergence.</p>
+<blockquote>
+</blockquote>
+<p>1 Bottou, L. (2010). Large-scale machine learning with stochastic gradient descent. In Proceedings of COMPSTAT’2010 (pp. 177-186). Physica-Verlag HD.</p>
+<blockquote>
+</blockquote>
+<p>[2] Ge, R., Huang, F., Jin, C., &amp; Yuan, Y. (2015, June). Escaping From Saddle Points-Online Stochastic Gradient for Tensor Decomposition. In COLT (pp. 797-842).</p>
+
       
     </div>
     
@@ -415,6 +424,14 @@ Why mini batch size is better than one single “bat
     
 
     
+      <div>
+	    
+<div style="text-align:center;color: #ccc;font-size:14px;">
+	------ The End ^_^ Thanks for reading ------</div>
+
+
+      </div>
+	
 
     
 
@@ -424,336 +441,36 @@ Why mini batch size is better than one single “bat
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhizhou.site/2018/06/04/编程笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhi ZHOU">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/me.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zhi ZHOU's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/04/编程笔记/" itemprop="url">编程笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-04T00:37:42+02:00">
-                2018-06-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/阅读笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">阅读笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/machine-learning/" rel="tag"># machine learning</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  6
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          
-前言：该文章用于记录个人平时的阅读笔记或者编程随想。内容比较片段化，有些地方略过，有些地方会直接引用，不会细讲，目的只是一个reminder。
-
-C++ 智能指针C++ 智能指针能够自动释放指针指向的内存，避免内存泄露的危险。常用的C++智能指针有shared_ptr，auto_ptr，unique_ptr和weak_ptr。
-常见的内存错误１．内存分配不成功却使用了它。并不是所有内存分配都会成功，在使用之前使用assert(p!=NULL)来检查指针是否为NULL。如果是用malloc或new来申请内存，应该用if(p==NULL) 或if(p!=NULL)进行防错处理。２．内存分配成功却
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/04/编程笔记/#more" rel="contents">
-              Read more &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/04/编程笔记/" rel="next" title="编程笔记">
+                <i class="fa fa-chevron-left"></i> 编程笔记
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhizhou.site/2018/05/18/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhi ZHOU">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/me.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zhi ZHOU's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/18/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-18T21:27:51+02:00">
-                2018-05-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-More info: Writing
-Run server1$ hexo server
-More in
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/18/hello-world/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -763,10 +480,11 @@ More in
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -774,6 +492,15 @@ More in
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNjYxNC8xMzE0OQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -796,8 +523,17 @@ More in
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -910,6 +646,22 @@ More in
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Is-it-possible-to-specify-different-batch-sizes-for-train-and-validation"><span class="nav-number">1.</span> <span class="nav-text">Is it possible to specify different batch sizes for train and validation?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Why-mini-batch-size-is-better-than-one-single-“batch”-with-all-training-data"><span class="nav-number">2.</span> <span class="nav-text">Why mini batch size is better than one single “batch” with all training data?</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1082,6 +834,10 @@ More in
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1110,6 +866,17 @@ More in
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
