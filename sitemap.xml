@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://zhizhou.site/about/index.html</loc>
+    <loc>http://zhizhou.site/2018/06/05/Machine-Learning-Tricks/</loc>
     
-    <lastmod>2018-06-05T16:19:18.237Z</lastmod>
+    <lastmod>2018-06-14T09:41:58.075Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhizhou.site/2018/06/05/Machine-Learning-Tricks/</loc>
+    <loc>http://zhizhou.site/about/index.html</loc>
     
-    <lastmod>2018-06-05T16:04:34.037Z</lastmod>
+    <lastmod>2018-06-05T16:19:18.237Z</lastmod>
     
   </url>
   
@@ -33,13 +33,6 @@
     <loc>http://zhizhou.site/tags/index.html</loc>
     
     <lastmod>2018-06-03T23:19:14.629Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhizhou.site/2018/05/18/hello-world/</loc>
-    
-    <lastmod>2018-05-18T19:27:51.851Z</lastmod>
     
   </url>
   

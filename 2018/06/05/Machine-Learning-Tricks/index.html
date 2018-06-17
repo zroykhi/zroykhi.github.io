@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="Zhi ZHOU&#39;s blog">
 <meta property="og:description" content="Preface: Some note collections about machine learning  Is it possible to specify different batch sizes for train and validation?for train data, there are reasons to keep batches relatively small (bat">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-05T16:04:34.037Z">
+<meta property="og:updated_time" content="2018-06-14T09:41:58.075Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Machine Learning Notes">
 <meta name="twitter:description" content="Preface: Some note collections about machine learning  Is it possible to specify different batch sizes for train and validation?for train data, there are reasons to keep batches relatively small (bat">
@@ -169,7 +169,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">不忘初心</p>
+        <p class="site-subtitle"></p>
       
   </div>
 
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  3
+                  4
                 </span>
               
             </div>
@@ -435,6 +435,19 @@
 <p>1 Bottou, L. (2010). Large-scale machine learning with stochastic gradient descent. In Proceedings of COMPSTAT’2010 (pp. 177-186). Physica-Verlag HD.</p>
 <p>[2] Ge, R., Huang, F., Jin, C., &amp; Yuan, Y. (2015, June). Escaping From Saddle Points-Online Stochastic Gradient for Tensor Decomposition. In COLT (pp. 797-842).</p>
 </blockquote>
+<h3 id="Train-loss-为-nan-的可能原因"><a href="#Train-loss-为-nan-的可能原因" class="headerlink" title="Train loss 为 nan　的可能原因"></a>Train loss 为 nan　的可能原因</h3><ul>
+<li>learning rate太大，导致loss无法converge而趋近无穷</li>
+<li>检查计算过程是否有除以0的情况</li>
+<li>input data含有nan情况，使用 assert not np.any(np.isnan(x))确保不含有nan情况，同时也保证output data全为有效数据</li>
+</ul>
+<h3 id="神经网络的预测值为常数，不符合实际情况"><a href="#神经网络的预测值为常数，不符合实际情况" class="headerlink" title="神经网络的预测值为常数，不符合实际情况"></a>神经网络的预测值为常数，不符合实际情况</h3><ul>
+<li>神经元麻木，检查是否是因为没有batch normalization</li>
+</ul>
+<h3 id="RNN神经网络添加batch-normalization"><a href="#RNN神经网络添加batch-normalization" class="headerlink" title="RNN神经网络添加batch normalization?"></a>RNN神经网络添加batch normalization?</h3><h3 id="防止过拟合"><a href="#防止过拟合" class="headerlink" title="防止过拟合"></a>防止过拟合</h3><ul>
+<li>修改合适的weight_decay</li>
+<li>减小学习速度</li>
+<li>增加数据</li>
+</ul>
 
       
     </div>
@@ -571,7 +584,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -675,7 +688,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Is-it-possible-to-specify-different-batch-sizes-for-train-and-validation"><span class="nav-number">1.</span> <span class="nav-text">Is it possible to specify different batch sizes for train and validation?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Why-mini-batch-size-is-better-than-one-single-“batch”-with-all-training-data"><span class="nav-number">2.</span> <span class="nav-text">Why mini batch size is better than one single “batch” with all training data?</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Is-it-possible-to-specify-different-batch-sizes-for-train-and-validation"><span class="nav-number">1.</span> <span class="nav-text">Is it possible to specify different batch sizes for train and validation?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Why-mini-batch-size-is-better-than-one-single-“batch”-with-all-training-data"><span class="nav-number">2.</span> <span class="nav-text">Why mini batch size is better than one single “batch” with all training data?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Train-loss-为-nan-的可能原因"><span class="nav-number">3.</span> <span class="nav-text">Train loss 为 nan　的可能原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#神经网络的预测值为常数，不符合实际情况"><span class="nav-number">4.</span> <span class="nav-text">神经网络的预测值为常数，不符合实际情况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RNN神经网络添加batch-normalization"><span class="nav-number">5.</span> <span class="nav-text">RNN神经网络添加batch normalization?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#防止过拟合"><span class="nav-number">6.</span> <span class="nav-text">防止过拟合</span></a></li></ol></div>
             
 
           </div>
@@ -716,7 +729,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.1k</span>
+    <span title="Site words total count">2.2k</span>
   
 </div>
 
