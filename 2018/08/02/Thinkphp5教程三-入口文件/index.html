@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="PHP,Thinkphp," />
 
 
 
@@ -85,17 +85,18 @@
 
 
 
-<meta name="description" content="Moi? Ça va">
-<meta name="keywords" content="Tags, categories, posts">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zhi ZHOU&#39;s blog">
-<meta property="og:url" content="http://zhizhou.site/categories/阅读笔记/index.html">
+<meta name="description" content="最近在学thinkPHP, 但是官网给的教程十分简陋, 惜字如金, 很多没有解释清楚. 所以自己整理了一些笔记, 供参考. 转载请联系.  开始之前, 可以首先将application文件夹名字修改为app, 然后修改public/index.php入口文件中的define(&amp;#39;APP_PATH&amp;#39;, __DIR__ . &amp;#39;/../application/&amp;#39;); 变为">
+<meta name="keywords" content="PHP,Thinkphp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Thinkphp5教程三:入口文件">
+<meta property="og:url" content="http://zhizhou.site/2018/08/02/Thinkphp5教程三-入口文件/index.html">
 <meta property="og:site_name" content="Zhi ZHOU&#39;s blog">
-<meta property="og:description" content="Moi? Ça va">
+<meta property="og:description" content="最近在学thinkPHP, 但是官网给的教程十分简陋, 惜字如金, 很多没有解释清楚. 所以自己整理了一些笔记, 供参考. 转载请联系.  开始之前, 可以首先将application文件夹名字修改为app, 然后修改public/index.php入口文件中的define(&amp;#39;APP_PATH&amp;#39;, __DIR__ . &amp;#39;/../application/&amp;#39;); 变为">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-02T13:13:34.759Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhi ZHOU&#39;s blog">
-<meta name="twitter:description" content="Moi? Ça va">
+<meta name="twitter:title" content="Thinkphp5教程三:入口文件">
+<meta name="twitter:description" content="最近在学thinkPHP, 但是官网给的教程十分简陋, 惜字如金, 很多没有解释清楚. 所以自己整理了一些笔记, 供参考. 转载请联系.  开始之前, 可以首先将application文件夹名字修改为app, 然后修改public/index.php入口文件中的define(&amp;#39;APP_PATH&amp;#39;, __DIR__ . &amp;#39;/../application/&amp;#39;); 变为">
 
 
 
@@ -125,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="http://zhizhou.site/categories/阅读笔记/"/>
+  <link rel="canonical" href="http://zhizhou.site/2018/08/02/Thinkphp5教程三-入口文件/"/>
 
 
 
@@ -133,7 +134,7 @@
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
 
-  <title>Category: 阅读笔记 | Zhi ZHOU's blog</title>
+  <title>Thinkphp5教程三:入口文件 | Zhi ZHOU's blog</title>
   
 
 
@@ -152,7 +153,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -293,167 +294,228 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>阅读笔记<small>Category</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhizhou.site/2018/08/02/Thinkphp5教程三-入口文件/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhi ZHOU">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/hero.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhi ZHOU's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/08/02/Thinkphp5教程三-入口文件/" itemprop="url">
-              
-                <span itemprop="name">Thinkphp5教程三:入口文件</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Thinkphp5教程三:入口文件</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-02T15:05:51+02:00"
-              content="2018-08-02" >
-          08-02
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-02T15:05:51+02:00">
+                2018-08-02
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/阅读笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">阅读笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/02/Thinkphp5教程二-系统环境配置和使用/" itemprop="url">
-              
-                <span itemprop="name">Thinkphp5教程二:系统环境配置和使用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-02T14:50:52+02:00"
-              content="2018-08-02" >
-          08-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/02/Thinkphp5教程一-项目配置/" itemprop="url">
-              
-                <span itemprop="name">Thinkphp5教程一:项目配置</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-02T14:32:39+02:00"
-              content="2018-08-02" >
-          08-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/06/05/Machine-Learning-Tricks/" itemprop="url">
-              
-                <span itemprop="name">Machine Learning Notes</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-05T11:54:50+02:00"
-              content="2018-06-05" >
-          06-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/06/04/编程笔记/" itemprop="url">
-              
-                <span itemprop="name">编程笔记</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-04T00:37:42+02:00"
-              content="2018-06-04" >
-          06-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <blockquote>
+<p>最近在学thinkPHP, 但是官网给的教程十分简陋, 惜字如金, 很多没有解释清楚. 所以自己整理了一些笔记, 供参考. 转载请联系.</p>
+</blockquote>
+<p>开始之前, 可以首先将application文件夹名字修改为app, 然后修改public/index.php入口文件中的<code>define(&#39;APP_PATH&#39;, __DIR__ . &#39;/../application/&#39;);</code> 变为<code>define(&#39;APP_PATH&#39;, __DIR__ . &#39;/../app/&#39;);</code>, 这样之后的代码在逻辑上可能更好理解. 我项目的主目录是ThinkPHP/, 如果你的项目不是这个名字, 需要自行修改保证url能正常访问.</p>
+<h1 id="入口文件"><a href="#入口文件" class="headerlink" title="入口文件"></a>入口文件</h1><p>单入口文件: 应用程序的所有http请求都由某文件接收并由这个文件转发到功能代码中. thinkPHP框架中所有的请求都经过public/index.php.</p>
+<p>单入口文件优势:</p>
+<ul>
+<li>安全检测</li>
+<li>请求过滤</li>
+</ul>
+<p><code>public/index.php</code>文件中必须加载框架引导文件<code>start.php</code>, 该文件为我们处理安全过滤.可以修改app/index/controller/Index.php文件:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">namespace app\index\controller;</span><br><span class="line"></span><br><span class="line">class index</span><br><span class="line">&#123;</span><br><span class="line">  public function index()</span><br><span class="line">  &#123;</span><br><span class="line">    dump(config());// print all the configs</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="隐藏入口文件"><a href="#隐藏入口文件" class="headerlink" title="隐藏入口文件"></a>隐藏入口文件</h1><p>方法:</p>
+<ul>
+<li>将websever的根目录设置为项目的public/文件夹</li>
+<li>取消注释<code>httpd.conf</code>文件(Ubuntu中在/opt/lampp/etc/下)里的<code>LoadModule rewrite_module modules/mod_rewrite.so</code></li>
+<li>将该文件中的<directory “root_dir_of_your_web_server”="">下的<code>AllowOverride None改为AllowOverride All</code></directory></li>
+<li><p>同时保证网站目录public/.htaccess文件中内容为:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;IfModule mod_rewrite.c&gt;</span><br><span class="line">  Options +FollowSymlinks -Multiviews</span><br><span class="line">  RewriteEngine On</span><br><span class="line"></span><br><span class="line">  RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">  RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">  RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启Apache</p>
+</li>
+</ul>
+<p>注释: <code>RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]</code>是指将所有请求<code>^(.*)$</code>放到index.php/后面的<code>$1</code>这里, 所以保证我们能正常访问.</p>
+<h1 id="入口文件的绑定"><a href="#入口文件的绑定" class="headerlink" title="入口文件的绑定"></a>入口文件的绑定</h1><p>在入口文件index.php添加:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">define(&apos;BIND_MODULE&apos;, &apos;demo&apos;);</span><br></pre></td></tr></table></figure></p>
+<p>则url访问demo模块下Index控制器的index方法需要输入: <a href="http://localhost/ThinkPHP/public/Index/index" target="_blank" rel="noopener">http://localhost/ThinkPHP/public/Index/index</a></p>
+<p>若是<code>define(&#39;BIND_MODULE&#39;, &#39;demo/index&#39;);</code>, 则url访问demo模块下Index控制器的index方法需要输入:<br><a href="http://localhost/ThinkPHP/public/index" target="_blank" rel="noopener">http://localhost/ThinkPHP/public/index</a><br>总之要保证define里面参数加上url的参数最终得到: 模块/控制器/方法 的形式, 才可以正确访问, 只有小项目的时候需要设置入口文件绑定, 大项目一般不用设置.</p>
+<p>假设我们的项目需要给第三方提供接口, 这时我们不希望第三方还访问经过public/index.php, 我们可以建立public/api.php, 写入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">define(&apos;APP_PATH&apos;, __DIR__ . &apos;/../application/&apos;);</span><br><span class="line">define(&apos;CONF_PATH&apos;, __DIR__ . &apos;/../conf/&apos;);</span><br><span class="line">define(&apos;BIND_MODULE&apos;, &apos;api&apos;);</span><br><span class="line">require __DIR__ . &apos;/../thinkphp/start.php&apos;;</span><br></pre></td></tr></table></figure></p>
+<p>此时我们访问: <a href="http://localhost/ThinkPHP/public/api.php" target="_blank" rel="noopener">http://localhost/ThinkPHP/public/api.php</a>, 则只能访问到api这个模块了.</p>
+<p>或者使用thinkPHP提供的另一个功能. 在conf/config.php文件中添加配置: <code>‘auto_bind_module’  =&gt; true</code>, 这时系统会根据url里面含有的php文件名自动访问对应的同名模块. 这时假设我们url输入: <a href="http://localhost/ThinkPHP/public/api.php/index/demo" target="_blank" rel="noopener">http://localhost/ThinkPHP/public/api.php/index/demo</a><br>即可直接访问api模块下的index控制器的demo方法.</p>
+<p>需要注意的是, 通过设置<code>auto_bind_module</code>绑定的方法是可以访问其他模块的, 而通过define方式绑定的入口若没有该模块则直接报错.</p>
 
       
     </div>
+    
+    
+    
 
+    
+      <div>
+	    
+<div style="text-align:center;color: #ccc;font-size:14px;">
+	------ The End ^_^ Thanks for reading ------</div>
+
+
+      </div>
+	
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+            <a href="/tags/Thinkphp/" rel="tag"># Thinkphp</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/02/Thinkphp5教程二-系统环境配置和使用/" rel="next" title="Thinkphp5教程二:系统环境配置和使用">
+                <i class="fa fa-chevron-left"></i> Thinkphp5教程二:系统环境配置和使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -461,6 +523,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNjYxNC8xMzE0OQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -483,8 +554,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -597,6 +677,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#入口文件"><span class="nav-number">1.</span> <span class="nav-text">入口文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#隐藏入口文件"><span class="nav-number">2.</span> <span class="nav-text">隐藏入口文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#入口文件的绑定"><span class="nav-number">3.</span> <span class="nav-text">入口文件的绑定</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -769,6 +865,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -797,6 +897,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
