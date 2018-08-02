@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="PHP,Thinkphp," />
 
 
 
@@ -85,17 +85,18 @@
 
 
 
-<meta name="description" content="Moi? Ça va">
-<meta name="keywords" content="Tags, categories, posts">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zhi ZHOU&#39;s blog">
-<meta property="og:url" content="http://zhizhou.site/tags/C/index.html">
+<meta name="description" content="最近在学thinkPHP, 但是官网给的教程十分简陋, 惜字如金, 很多没有解释清楚. 所以自己整理了一些笔记, 供参考. 转载请联系.  开始之前, 可以首先将application文件夹名字修改为app, 然后修改public/index.php入口文件中的define(&amp;#39;APP_PATH&amp;#39;, __DIR__ . &amp;#39;/../application/&amp;#39;); 变为">
+<meta name="keywords" content="PHP,Thinkphp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Thinkphp5教程五:请求对象Request">
+<meta property="og:url" content="http://zhizhou.site/2018/08/02/Thinkphp5教程五-请求对象Request/index.html">
 <meta property="og:site_name" content="Zhi ZHOU&#39;s blog">
-<meta property="og:description" content="Moi? Ça va">
+<meta property="og:description" content="最近在学thinkPHP, 但是官网给的教程十分简陋, 惜字如金, 很多没有解释清楚. 所以自己整理了一些笔记, 供参考. 转载请联系.  开始之前, 可以首先将application文件夹名字修改为app, 然后修改public/index.php入口文件中的define(&amp;#39;APP_PATH&amp;#39;, __DIR__ . &amp;#39;/../application/&amp;#39;); 变为">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-02T13:31:23.769Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhi ZHOU&#39;s blog">
-<meta name="twitter:description" content="Moi? Ça va">
+<meta name="twitter:title" content="Thinkphp5教程五:请求对象Request">
+<meta name="twitter:description" content="最近在学thinkPHP, 但是官网给的教程十分简陋, 惜字如金, 很多没有解释清楚. 所以自己整理了一些笔记, 供参考. 转载请联系.  开始之前, 可以首先将application文件夹名字修改为app, 然后修改public/index.php入口文件中的define(&amp;#39;APP_PATH&amp;#39;, __DIR__ . &amp;#39;/../application/&amp;#39;); 变为">
 
 
 
@@ -125,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="http://zhizhou.site/tags/C/"/>
+  <link rel="canonical" href="http://zhizhou.site/2018/08/02/Thinkphp5教程五-请求对象Request/"/>
 
 
 
@@ -133,7 +134,7 @@
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
 
-  <title>Tag: C++ | Zhi ZHOU's blog</title>
+  <title>Thinkphp5教程五:请求对象Request | Zhi ZHOU's blog</title>
   
 
 
@@ -152,7 +153,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -293,54 +294,212 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>C++<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhizhou.site/2018/08/02/Thinkphp5教程五-请求对象Request/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhi ZHOU">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/hero.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhi ZHOU's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/06/04/编程笔记/" itemprop="url">
-              
-                <span itemprop="name">编程笔记</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Thinkphp5教程五:请求对象Request</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-04T00:37:42+02:00"
-              content="2018-06-04" >
-          06-04
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-02T15:27:48+02:00">
+                2018-08-02
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/阅读笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">阅读笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>最近在学thinkPHP, 但是官网给的教程十分简陋, 惜字如金, 很多没有解释清楚. 所以自己整理了一些笔记, 供参考. 转载请联系.</p>
+</blockquote>
+<p>开始之前, 可以首先将application文件夹名字修改为app, 然后修改public/index.php入口文件中的<code>define(&#39;APP_PATH&#39;, __DIR__ . &#39;/../application/&#39;);</code> 变为<code>define(&#39;APP_PATH&#39;, __DIR__ . &#39;/../app/&#39;);</code>, 这样之后的代码在逻辑上可能更好理解. 我项目的主目录是ThinkPHP/, 如果你的项目不是这个名字, 需要自行修改保证url能正常访问.</p>
+<h1 id="请求对象Request"><a href="#请求对象Request" class="headerlink" title="请求对象Request"></a>请求对象Request</h1><p>Generally, we use the following three methods to get parameters.</p>
+<ul>
+<li>直接使用request方法</li>
+<li>使用Request类, 单例模式, 在整个应用中, 只能实例化一次</li>
+<li>直接注入方法, 传入参数(建议使用, 更加直白)<br>具体代码例子如下:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">namespace app\index\controller;</span><br><span class="line"></span><br><span class="line">use think\Request;</span><br><span class="line"></span><br><span class="line">class Index</span><br><span class="line">&#123;</span><br><span class="line">    public function index()</span><br><span class="line">    &#123;</span><br><span class="line">      // method 1</span><br><span class="line">      // $request = request();</span><br><span class="line">      // method 2</span><br><span class="line">      $request = Request::instance();</span><br><span class="line">      dump($request);</span><br><span class="line">    &#125;</span><br><span class="line">    // method 3</span><br><span class="line">    public function demo(Request $request)</span><br><span class="line">    &#123;</span><br><span class="line">        dump($request);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>内部流程是：入口文件index.php-&gt; 引入start.php-&gt;执行App::run()-&gt; 返回一个Request对象, 所以后面就可以直接使用request了. Example：<br>app/index/controller/Index.php<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">namespace app\index\controller;</span><br><span class="line"></span><br><span class="line">use think\Request;</span><br><span class="line"></span><br><span class="line">class Index</span><br><span class="line">&#123;</span><br><span class="line">    public function index(Request $request)</span><br><span class="line">    &#123;</span><br><span class="line">      // 获取浏览器输入框的值</span><br><span class="line">      dump($request-&gt;domain());</span><br><span class="line">      dump($request-&gt;pathinfo());</span><br><span class="line">      dump($request-&gt;path());</span><br><span class="line"></span><br><span class="line">      // 请求类型</span><br><span class="line">      dump($request-&gt;method());</span><br><span class="line">      dump($request-&gt;isGet());</span><br><span class="line">      dump($request-&gt;isPost());</span><br><span class="line">      dump($request-&gt;isAjax());</span><br><span class="line"></span><br><span class="line">      // 请求的参数</span><br><span class="line">      dump($request-&gt;get());</span><br><span class="line">      dump($request-&gt;param());</span><br><span class="line">      dump($request-&gt;post());</span><br><span class="line">      // session(&apos;name&apos;, &apos;theo&apos;);</span><br><span class="line">      dump($request-&gt;session());</span><br><span class="line">      // cookie(&apos;email&apos;, &apos;222@qq.com&apos;);</span><br><span class="line">      dump($request-&gt;cookie());</span><br><span class="line">      dump($request-&gt;param(&apos;type&apos;));</span><br><span class="line">      dump($request-&gt;cookie(&apos;email&apos;));</span><br><span class="line"></span><br><span class="line">      // 获取模块, 控制器, 操作, 用于验证是否有权限等</span><br><span class="line">      dump($request-&gt;module());</span><br><span class="line">      dump($request-&gt;controller());</span><br><span class="line">      dump($request-&gt;action());</span><br><span class="line">      dump($request-&gt;url());</span><br><span class="line">      dump($request-&gt;baseUrl());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后我们在浏览器输入: <a href="http://localhost/ThinkPHP/public/index/Index/index/type/5.html?id=10" target="_blank" rel="noopener">http://localhost/ThinkPHP/public/index/Index/index/type/5.html?id=10</a></p>
+<p>要注意的是:需要将convention.php中的session设置复制到app的config.php中, 然后记得删除<strong>httponly</strong>和<strong>secure</strong>这两项设置, 才能正常启用session. (实际测试中, 不删除也可以使用)</p>
 
       
     </div>
+    
+    
+    
 
+    
+      <div>
+	    
+<div style="text-align:center;color: #ccc;font-size:14px;">
+	------ The End ^_^ Thanks for reading ------</div>
+
+
+      </div>
+	
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+            <a href="/tags/Thinkphp/" rel="tag"># Thinkphp</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/02/Thinkphp5教程四-路由/" rel="next" title="Thinkphp5教程四:路由">
+                <i class="fa fa-chevron-left"></i> Thinkphp5教程四:路由
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -348,6 +507,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNjYxNC8xMzE0OQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -370,8 +538,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -484,6 +661,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#请求对象Request"><span class="nav-number">1.</span> <span class="nav-text">请求对象Request</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -656,6 +849,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -684,6 +881,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
