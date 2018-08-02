@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="Zhi ZHOU&#39;s blog">
 <meta property="og:description" content="最近在学thinkPHP, 但是官网给的教程十分简陋, 惜字如金, 很多没有解释清楚. 所以自己整理了一些笔记, 供参考. 转载请联系.  开始之前, 可以首先将application文件夹名字修改为app, 然后修改public/index.php入口文件中的define(&amp;#39;APP_PATH&amp;#39;, __DIR__ . &amp;#39;/../application/&amp;#39;); 变为">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-02T13:13:34.759Z">
+<meta property="og:updated_time" content="2018-08-02T13:18:12.905Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Thinkphp5教程三:入口文件">
 <meta name="twitter:description" content="最近在学thinkPHP, 但是官网给的教程十分简陋, 惜字如金, 很多没有解释清楚. 所以自己整理了一些笔记, 供参考. 转载请联系.  开始之前, 可以首先将application文件夹名字修改为app, 然后修改public/index.php入口文件中的define(&amp;#39;APP_PATH&amp;#39;, __DIR__ . &amp;#39;/../application/&amp;#39;); 变为">
@@ -440,7 +440,7 @@
 <p>注释: <code>RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]</code>是指将所有请求<code>^(.*)$</code>放到index.php/后面的<code>$1</code>这里, 所以保证我们能正常访问.</p>
 <h1 id="入口文件的绑定"><a href="#入口文件的绑定" class="headerlink" title="入口文件的绑定"></a>入口文件的绑定</h1><p>在入口文件index.php添加:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">define(&apos;BIND_MODULE&apos;, &apos;demo&apos;);</span><br></pre></td></tr></table></figure></p>
 <p>则url访问demo模块下Index控制器的index方法需要输入: <a href="http://localhost/ThinkPHP/public/Index/index" target="_blank" rel="noopener">http://localhost/ThinkPHP/public/Index/index</a></p>
-<p>若是<code>define(&#39;BIND_MODULE&#39;, &#39;demo/index&#39;);</code>, 则url访问demo模块下Index控制器的index方法需要输入:<br><a href="http://localhost/ThinkPHP/public/index" target="_blank" rel="noopener">http://localhost/ThinkPHP/public/index</a><br>总之要保证define里面参数加上url的参数最终得到: 模块/控制器/方法 的形式, 才可以正确访问, 只有小项目的时候需要设置入口文件绑定, 大项目一般不用设置.</p>
+<p>若是<code>define(&#39;BIND_MODULE&#39;, &#39;demo/index&#39;);</code>, 则url访问demo模块下Index控制器的index方法需要输入: <a href="http://localhost/ThinkPHP/public/index" target="_blank" rel="noopener">http://localhost/ThinkPHP/public/index</a><br>总之要保证define里面参数加上url的参数最终得到: 模块/控制器/方法 的形式, 才可以正确访问, 只有小项目的时候需要设置入口文件绑定, 大项目一般不用设置.</p>
 <p>假设我们的项目需要给第三方提供接口, 这时我们不希望第三方还访问经过public/index.php, 我们可以建立public/api.php, 写入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">define(&apos;APP_PATH&apos;, __DIR__ . &apos;/../application/&apos;);</span><br><span class="line">define(&apos;CONF_PATH&apos;, __DIR__ . &apos;/../conf/&apos;);</span><br><span class="line">define(&apos;BIND_MODULE&apos;, &apos;api&apos;);</span><br><span class="line">require __DIR__ . &apos;/../thinkphp/start.php&apos;;</span><br></pre></td></tr></table></figure></p>
 <p>此时我们访问: <a href="http://localhost/ThinkPHP/public/api.php" target="_blank" rel="noopener">http://localhost/ThinkPHP/public/api.php</a>, 则只能访问到api这个模块了.</p>
 <p>或者使用thinkPHP提供的另一个功能. 在conf/config.php文件中添加配置: <code>‘auto_bind_module’  =&gt; true</code>, 这时系统会根据url里面含有的php文件名自动访问对应的同名模块. 这时假设我们url输入: <a href="http://localhost/ThinkPHP/public/api.php/index/demo" target="_blank" rel="noopener">http://localhost/ThinkPHP/public/api.php/index/demo</a><br>即可直接访问api模块下的index控制器的demo方法.</p>
@@ -496,6 +496,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/02/Thinkphp5教程四-路由/" rel="prev" title="Thinkphp5教程四:路由">
+                Thinkphp5教程四:路由 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -583,7 +587,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -728,7 +732,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">5.0k</span>
+    <span title="Site words total count">5.4k</span>
   
 </div>
 
