@@ -12,7 +12,7 @@ date: 2018-05-19 21:58:17
   + Zhi ZHOU/masculin/90s
   + Étudiant d'ingénieur/ENSTA ParisTech/Intelligence Artificielle
   + Licence/Université Jiao Tong de Shanghai/Achitecture Navale Et Génie Océanique(BAC+4)
-  + Chinois/Anglais/Français/Zhuang/Liuzhou dialecte
+  + Chinois/Anglais/Français/Zhuang/Dialecte de Liuzhou
 
 # 个人简历
   + 周智/男/90后
