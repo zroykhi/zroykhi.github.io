@@ -75,7 +75,7 @@ footer:
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: true
+seo: false
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
@@ -136,7 +136,8 @@ social:
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
   #YouTube: https://youtube.com/yourname || youtube
   Instagram: https://instagram.com/theoo1216 || instagram
-  知乎: https://www.zhihu.com/people/zhou-xiao-zhou-12-16/activities ||
+  #知乎: https://www.zhihu.com/people/zhou-xiao-zhou-12-16/activities ||
+  知乎: localhost ||
   #Skype: skype:yourname?call|chat || skype
 
 social_icons:
@@ -150,13 +151,14 @@ links_title: Links
 #links_layout: block
 links_layout: inline
 links:
-  Facebook: https://www.facebook.com/zhi.zhou.16906
+  #Facebook: https://www.facebook.com/zhi.zhou.16906
+  Movie: https://agoodmovietowatch.com/
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
 #avatar: /images/avatar.gif
-avatar: /images/me.jpg
+avatar: /images/hero.jpg
 
 # Table Of Contents in the Sidebar
 toc:
@@ -537,7 +539,7 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: true
+  enable: false
   app_id: gvzG0bH3UNclSm9K0DQIGhiJ-gzGzoHsz
   app_key: mHS38xMkeGcLyFsK98jwenjn
 
@@ -565,7 +567,7 @@ busuanzi_count:
   site_pv_header: <i class="fa fa-eye"></i> 总访问量
   site_pv_footer:
   # custom pv span for one page only
-  page_pv: true
+  page_pv: false
   page_pv_header: <i class="fa fa-file-o"></i> 阅读次数
   page_pv_footer:
 
