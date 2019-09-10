@@ -8,8 +8,30 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>Moi? Ça va</description>
-    <pubDate>Thu, 02 Aug 2018 13:34:37 GMT</pubDate>
+    <pubDate>Tue, 07 Aug 2018 13:40:46 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Thinkphp5教程六:input助手函数</title>
+      <link>http://zhizhou.site/2018/08/07/Thinkphp5%E6%95%99%E7%A8%8B%E5%85%AD-input%E5%8A%A9%E6%89%8B%E5%87%BD%E6%95%B0/</link>
+      <guid>http://zhizhou.site/2018/08/07/Thinkphp5%E6%95%99%E7%A8%8B%E5%85%AD-input%E5%8A%A9%E6%89%8B%E5%87%BD%E6%95%B0/</guid>
+      <pubDate>Tue, 07 Aug 2018 13:07:19 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;最近在学thinkPHP, 但是官网给的教程十分简陋, 惜字如金, 很多没有解释清楚. 所以自己整理了一些笔记, 供参考. 转载请联系.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;开始之前, 可以首先将application文件夹名字修改为app,
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<blockquote><p>最近在学thinkPHP, 但是官网给的教程十分简陋, 惜字如金, 很多没有解释清楚. 所以自己整理了一些笔记, 供参考. 转载请联系.</p></blockquote><p>开始之前, 可以首先将application文件夹名字修改为app, 然后修改public/index.php入口文件中的<code>define(&#39;APP_PATH&#39;, __DIR__ . &#39;/../application/&#39;);</code> 变为<code>define(&#39;APP_PATH&#39;, __DIR__ . &#39;/../app/&#39;);</code>, 这样之后的代码在逻辑上可能更好理解. 我项目的主目录是ThinkPHP/, 如果你的项目不是这个名字, 需要自行修改保证url能正常访问.</p><p>input助手函数定义在helper.php, 注意自己定义的函数里面不能有input, 否则不能正常使用input. 废话不说，直接例子：<br>app/index/controller/Index.php:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">namespace app\index\controller;</span><br><span class="line"></span><br><span class="line">use think\Request;</span><br><span class="line"></span><br><span class="line">class Index</span><br><span class="line">&#123;</span><br><span class="line">    public function index(Request $request)</span><br><span class="line">    &#123;</span><br><span class="line">      dump($request-&gt;param());</span><br><span class="line">      // $res = input(&apos;post.id&apos;);</span><br><span class="line">      // dump($request-&gt;post(&apos;id&apos;));</span><br><span class="line"></span><br><span class="line">      $res = input(&apos;get.id&apos;);</span><br><span class="line">      dump($request-&gt;get(&apos;id&apos;));</span><br><span class="line">      // 强制过滤</span><br><span class="line">      $res = input(&apos;post.id&apos;, 100, &apos;intval&apos;);</span><br><span class="line">      dump($request-&gt;get(&apos;id&apos;, 100, &apos;intval&apos;));</span><br><span class="line">      session(&apos;email&apos;, &apos;222@qq.com&apos;);</span><br><span class="line">      dump(input(&apos;session.email&apos;));</span><br><span class="line">      dump($res);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>访问<a href="http://localhost/ThinkPHP/public/index/Index/index/type/5.html?id=10" target="_blank" rel="noopener">http://localhost/ThinkPHP/public/index/Index/index/type/5.html?id=10</a>, 若同时收到get和post,且他们含有同一个参数名id, 那么$res = input(‘id’);不能正常取到所有的值, 需要使用$res = input(‘post.id’);或者$res = input(get.id’);才行. 建议直接使用Request对象里面的各种方法获取参数, 使用input助手函数会出现重定义出错问题。</p>]]></content:encoded>
+      
+      <comments>http://zhizhou.site/2018/08/07/Thinkphp5%E6%95%99%E7%A8%8B%E5%85%AD-input%E5%8A%A9%E6%89%8B%E5%87%BD%E6%95%B0/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Thinkphp5教程五:请求对象Request</title>
