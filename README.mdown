@@ -1,6 +1,6 @@
 # Welcome to my personal page
 Site domain:
-  + http://www.zhizhou.site
+  + https://zroykhi.github.io/
 
 Also available with github link:
   + https://github.com/zroykhi/zroykhi.github.io.git
